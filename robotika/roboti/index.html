@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DITES – Robotika | Roboti KUKA</title>
+  <meta name="description" content="Přehled robotů KUKA pro průmyslovou automatizaci – seřazené podle nosnosti, dosahu a počtu kloubů.">
+
+  <link rel="icon" href="../../assets/img/favicon.ico">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/roboti.css">
+  <link rel="stylesheet" href="../../assets/css/print.css" media="print">
+</head>
+
+<body data-page="roboti">
+  <a class="skip-link" href="#main">Přeskočit na obsah</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="https://www.dites.cz" aria-label="DITES – Robotika">
+        <img src="../../assets/img/icons/dites-logo.png"
+             alt="Logo DITES"
+             class="brand-logo">
+        <span class="brand-text">
+          <strong>DITES</strong>
+          <span>Robotika</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        Menu
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Hlavní navigace">
+        <ul>
+          <li><a href="../">Domů</a></li>
+          <li><a href="../reseni-pro-vyrobu">Řešení pro výrobu</a></li>
+          <li><a class="active" href="./">Roboti KUKA</a></li>
+          <li><a href="../kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-content" role="main">
+
+    <!-- Hero -->
+    <section class="robots-hero" aria-labelledby="robots-hero-title">
+      <div class="robots-hero-bg" aria-hidden="true"></div>
+      <div class="container robots-hero-inner">
+        <p class="robots-eyebrow">ROBOTS KUKA</p>
+        <h1 id="robots-hero-title">Roboti pro manipulaci, paletizaci i těžké nasazení</h1>
+        <p class="robots-lead">
+          Přehled vybraných modelů KUKA rozřazených podle nosnosti, dosahu a počtu kloubů.
+          Pomůže ti rychle najít vhodnou řadu pro konkrétní aplikaci.
+        </p>
+      </div>
+    </section>
+
+    <!-- Toolbar + cards -->
+    <section class="section robots-section" aria-labelledby="robots-section-title">
+      <div class="container">
+        <header class="robots-header">
+          <h2 id="robots-section-title">Vyber si, jak chceš roboty seřadit</h2>
+          <p>Porovnej modely podle nosnosti, dosahu ramene nebo počtu kloubů.</p>
+
+          <div class="robots-toolbar" role="tablist" aria-label="Řazení robotů">
+            <button class="robots-sort-btn is-active"
+                    type="button"
+                    data-sort="payload"
+                    role="tab"
+                    aria-selected="true">
+              Podle nosnosti
+            </button>
+            <button class="robots-sort-btn"
+                    type="button"
+                    data-sort="reach"
+                    role="tab"
+                    aria-selected="false">
+              Podle dosahu
+            </button>
+            <button class="robots-sort-btn"
+                    type="button"
+                    data-sort="axes"
+                    role="tab"
+                    aria-selected="false">
+              Podle počtu kloubů
+            </button>
+          </div>
+
+          <p class="robots-sort-label" id="robots-sort-label">
+            Seřazeno podle: <strong>nosnosti (od nejvyšší)</strong>
+          </p>
+        </header>
+
+        <div class="robots-grid">
+          <!-- 1) KR 6 -->
+          <article class="robot-card reveal"
+                   data-payload="6"
+                   data-reach="900"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 6</span>
+              <span class="robot-tag robot-tag--light">Lehká manipulace</span>
+            </div>
+
+            <p class="robot-text">
+              Kompaktní robot pro jemnou manipulaci, drobné montáže a přesné zakládání dílů.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>6 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 900 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka1.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 2) KR 10 -->
+          <article class="robot-card reveal"
+                   data-payload="10"
+                   data-reach="1100"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 10</span>
+              <span class="robot-tag robot-tag--light">Pick &amp; place</span>
+            </div>
+
+            <p class="robot-text">
+              Rychlý robot pro pick&amp;place a manipulaci v buňkách s omezeným prostorem.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>10 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 1 100 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka1.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 3) KR 16 -->
+          <article class="robot-card reveal"
+                   data-payload="16"
+                   data-reach="1200"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 16</span>
+              <span class="robot-tag robot-tag--light">Montáž</span>
+            </div>
+
+            <p class="robot-text">
+              Šestiosý robot pro montážní linky, manipulaci se středně těžkými díly a obsluhu strojů.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>16 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 1 200 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka1.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 4) KR 20 -->
+          <article class="robot-card reveal"
+                   data-payload="20"
+                   data-reach="1610"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 20</span>
+              <span class="robot-tag robot-tag--mid">Univerzální manipulace</span>
+            </div>
+
+            <p class="robot-text">
+              Vhodný pro manipulaci, zakládání do CNC a automatizaci menších paletizačních úloh.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>20 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 1 610 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka2.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 5) KR 40 -->
+          <article class="robot-card reveal"
+                   data-payload="40"
+                   data-reach="2100"
+                   data-axes="4">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 40 PA</span>
+              <span class="robot-tag robot-tag--mid">Paletizace</span>
+            </div>
+
+            <p class="robot-text">
+              Čtyřosý paletizační robot pro kartony a balíky s vysokým taktem a jednoduchou kinematikou.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>40 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 2 100 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>4</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka2.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 6) KR 60 -->
+          <article class="robot-card reveal"
+                   data-payload="60"
+                   data-reach="2400"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 60</span>
+              <span class="robot-tag robot-tag--mid">Flexibilní výroba</span>
+            </div>
+
+            <p class="robot-text">
+              Robustní model pro manipulaci ve výrobě, svařování a manipulaci s většími sestavami.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>60 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 2 400 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka2.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 7) KR 90 -->
+          <article class="robot-card reveal"
+                   data-payload="90"
+                   data-reach="2500"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 90</span>
+              <span class="robot-tag robot-tag--heavy">Těžší manipulace</span>
+            </div>
+
+            <p class="robot-text">
+              Silnější šestiosý robot pro manipulaci s těžšími díly a přípravky na linkách.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>90 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 2 500 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 8) KR 120 -->
+          <article class="robot-card reveal"
+                   data-payload="120"
+                   data-reach="2700"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 120</span>
+              <span class="robot-tag robot-tag--heavy">Těžká manipulace</span>
+            </div>
+
+            <p class="robot-text">
+              Osvědčený model pro těžká břemena, paletizaci a manipulaci s velkými díly.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>120 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 2 700 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 9) KR 180 -->
+          <article class="robot-card reveal"
+                   data-payload="180"
+                   data-reach="2900"
+                   data-axes="4">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 180 PA</span>
+              <span class="robot-tag robot-tag--heavy">Paletizace heavy duty</span>
+            </div>
+
+            <p class="robot-text">
+              Výkonný paletizační robot pro velké vrstvy, pytle a těžké balíky ve skladech.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>180 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 2 900 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>4</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 10) KR 210 -->
+          <article class="robot-card reveal"
+                   data-payload="210"
+                   data-reach="3100"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 210</span>
+              <span class="robot-tag robot-tag--heavy">Karoserie a velké díly</span>
+            </div>
+
+            <p class="robot-text">
+              Robot pro automobilový průmysl, manipulaci s karoseriemi a velkoobjemovými sestavami.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>210 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 3 100 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 11) KR 240 -->
+          <article class="robot-card reveal"
+                   data-payload="240"
+                   data-reach="3200"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 240</span>
+              <span class="robot-tag robot-tag--heavy">Těžké manipulace</span>
+            </div>
+
+            <p class="robot-text">
+              Nasazení v těžkém průmyslu – od lisoven po paletizaci velkých palet a přípravků.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>240 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 3 200 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 12) KR 300 -->
+          <article class="robot-card reveal"
+                   data-payload="300"
+                   data-reach="3300"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 300</span>
+              <span class="robot-tag robot-tag--heavy">Ultra heavy duty</span>
+            </div>
+
+            <p class="robot-text">
+              Pro extrémně těžké díly, formy a nástroje, kde je klíčová kombinace dosahu a nosnosti.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>300 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 3 300 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 13) KR 360 -->
+          <article class="robot-card reveal"
+                   data-payload="360"
+                   data-reach="3400"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 360</span>
+              <span class="robot-tag robot-tag--heavy">Dlouhý dosah</span>
+            </div>
+
+            <p class="robot-text">
+              Model pro velké pracovní prostory, manipulaci s těžkými díly na dlouhou vzdálenost.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>360 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 3 400 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 14) KR 500 -->
+          <article class="robot-card reveal"
+                   data-payload="500"
+                   data-reach="3500"
+                   data-axes="5">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 500</span>
+              <span class="robot-tag robot-tag--heavy">Mega paletizace</span>
+            </div>
+
+            <p class="robot-text">
+              Pětiosý paletizační robot pro extrémně těžké palety, svitky a nestandardní náklady.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>500 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 3 500 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>5</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- 15) KR 700 -->
+          <article class="robot-card reveal"
+                   data-payload="700"
+                   data-reach="3600"
+                   data-axes="6">
+            <div class="robot-headline">
+              <span class="robot-series">KUKA KR 700</span>
+              <span class="robot-tag robot-tag--heavy">Nejtěžší nasazení</span>
+            </div>
+
+            <p class="robot-text">
+              Nejvyšší nosnost pro extrémní nasazení v ocelárnách, lisovnách a těžkém průmyslu.
+            </p>
+
+            <dl class="robot-specs">
+              <div>
+                <dt>Nosnost</dt>
+                <dd>700 kg</dd>
+              </div>
+              <div>
+                <dt>Dosah</dt>
+                <dd>cca 3 600 mm</dd>
+              </div>
+              <div>
+                <dt>Počet kloubů</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+
+            <a class="robot-link" href="./kuka3.html">
+              Detail robota <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-brand"><strong>DITES</strong></p>
+      <p>Dodavatel výrobních technologií a řídicích systémů.</p>
+      <address>
+        DITES spol. s r.o. • Teplice •
+        <a href="mailto:dites@dites.cz">dites@dites.cz</a>
+      </address>
+
+      <p class="footer-meta">
+        © <span id="year"></span> DITES. Všechna práva vyhrazena.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/roboti.js"></script>
+</body>
+</html>

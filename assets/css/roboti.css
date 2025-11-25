@@ -1,0 +1,298 @@
+/* Stránka "Roboti" – přehled robotů KUKA */
+
+.robots-hero{
+    position:relative;
+    padding:3.5rem 0 3rem;
+    color:#fff;
+    background:
+      linear-gradient(120deg, rgba(12,74,110,.95) 0%, rgba(30,120,166,.9) 55%, rgba(58,160,216,.8) 100%);
+    overflow:hidden;
+  }
+  
+  .robots-hero-bg{
+    position:absolute;
+    inset:0;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(255,255,255,.18), transparent 55%),
+      radial-gradient(circle at 85% 100%, rgba(255,255,255,.16), transparent 55%),
+      url("../img/hero-robot.jpg");
+    background-size:cover;
+    background-position:center;
+    mix-blend-mode:overlay;
+    opacity:.45;
+  }
+  
+  .robots-hero-inner{
+    position:relative;
+    display:grid;
+    gap:.7rem;
+    justify-items:flex-start;
+  }
+  
+  .robots-eyebrow{
+    margin:0;
+    font-size:.85rem;
+    letter-spacing:.14em;
+    font-weight:800;
+    color:#bfdbfe;
+    text-transform:uppercase;
+  }
+  
+  .robots-hero h1{
+    margin:0;
+    font-size:clamp(2rem, 4.3vw, 3rem);
+    line-height:1.2;
+    max-width:26ch;
+  }
+  
+  .robots-lead{
+    margin:0;
+    max-width:70ch;
+    font-size:clamp(1rem, 2.1vw, 1.15rem);
+    color:rgba(241,245,249,.95);
+  }
+  
+  /* Sekce s kartami */
+  
+  .robots-section{
+    background:#f6fbff;
+    border-top:1px solid #e3eef7;
+  }
+  
+  .robots-header{
+    display:grid;
+    gap:.5rem;
+    margin-bottom:1.8rem;
+  }
+  
+  .robots-header h2{
+    margin:0;
+    font-size:clamp(1.6rem, 3vw, 2.1rem);
+  }
+  
+  .robots-header p{
+    margin:0;
+    color:var(--gray-600);
+    max-width:70ch;
+  }
+  
+  .robots-sort-label{
+    margin:.4rem 0 0;
+    font-size:.9rem;
+    color:#64748b;
+  }
+  
+  /* Toolbar */
+  
+  .robots-toolbar{
+    margin-top:1rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+  }
+  
+  .robots-sort-btn{
+    border-radius:999px;
+    border:1px solid #cbd5f5;
+    background:#fff;
+    padding:.45rem .9rem;
+    font-size:.95rem;
+    font-weight:600;
+    color:var(--blue-900);
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    text-decoration:none;
+    transition:background .18s ease, border-color .18s ease, transform .08s ease;
+  }
+  
+  .robots-sort-btn:hover{
+    background:#e0efff;
+    border-color:#bfdbfe;
+  }
+  
+  .robots-sort-btn:active{
+    transform:translateY(1px);
+  }
+  
+  .robots-sort-btn.is-active{
+    background:var(--blue-900);
+    border-color:var(--blue-900);
+    color:#fff;
+  }
+  
+  /* Grid a karty */
+  
+  .robots-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1.2rem;
+  }
+  
+  .robot-card{
+    background:#fff;
+    border-radius:18px;
+    border:1px solid #e2e8f0;
+    padding:1.5rem 1.4rem 1.3rem;
+    box-shadow:var(--shadow);
+    display:flex;
+    flex-direction:column;
+    gap:.8rem;
+    position:relative;
+    overflow:hidden;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  
+  .robot-card::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; right:0;
+    height:6px;
+    background:linear-gradient(90deg, var(--blue-900), var(--blue-500));
+  }
+  
+  .robot-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 40px rgba(15,23,42,.16);
+    border-color:#cbd5f5;
+  }
+  
+  .robot-headline{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:.7rem;
+  }
+  
+  .robot-series{
+    font-weight:800;
+    font-size:1.1rem;
+  }
+  
+  .robot-tag{
+    padding:.25rem .6rem;
+    border-radius:999px;
+    font-size:.78rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+  }
+  
+  .robot-tag--light{
+    background:#ecfeff;
+    color:#0e7490;
+  }
+  
+  .robot-tag--mid{
+    background:#eef2ff;
+    color:#4338ca;
+  }
+  
+  .robot-tag--heavy{
+    background:#fef3c7;
+    color:#92400e;
+  }
+  
+  .robot-text{
+    margin:0;
+    color:var(--gray-600);
+  }
+  
+  /* Specifikace */
+  
+  .robot-specs{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:.6rem;
+    margin:.4rem 0 0;
+  }
+  
+  .robot-specs div{
+    padding:.4rem .45rem;
+    border-radius:10px;
+    background:#f8fafc;
+  }
+  
+  .robot-specs dt{
+    font-size:.78rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    color:#64748b;
+    margin:0 0 .15rem;
+  }
+  
+  .robot-specs dd{
+    margin:0;
+    font-weight:700;
+    color:#0f172a;
+  }
+  
+  /* Odkaz na detail */
+  
+  .robot-link{
+    margin-top:1rem;
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    font-weight:800;
+    color:var(--blue-700);
+    text-decoration:none;
+    width:max-content;
+    padding:.55rem .9rem;
+    border-radius:10px;
+    background:#eff6ff;
+    border:1px solid #dbeafe;
+    transition:background .18s ease, transform .08s ease;
+  }
+  
+  .robot-link:hover{
+    background:#dbeafe;
+  }
+  
+  .robot-link:active{
+    transform:translateY(1px);
+  }
+  
+  /* Reveal animace */
+  
+  .reveal{
+    opacity:0;
+    transform:translateY(20px);
+    transition:opacity .7s ease, transform .7s ease;
+  }
+  
+  .reveal.is-visible{
+    opacity:1;
+    transform:none;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 1100px){
+    .robots-grid{
+      grid-template-columns:repeat(2, 1fr);
+    }
+  
+    .robot-specs{
+      grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+  }
+  
+  @media (max-width: 720px){
+    .robots-hero{
+      padding:3rem 0 2.4rem;
+    }
+  
+    .robots-hero-inner{
+      justify-items:flex-start;
+    }
+  
+    .robots-grid{
+      grid-template-columns:1fr;
+    }
+  
+    .robot-specs{
+      grid-template-columns:1fr;
+    }
+  }
