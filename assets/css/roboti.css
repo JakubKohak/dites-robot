@@ -15,7 +15,7 @@
     background-image:
       radial-gradient(circle at 15% 0%, rgba(255,255,255,.18), transparent 55%),
       radial-gradient(circle at 85% 100%, rgba(255,255,255,.16), transparent 55%),
-      url("../img/hero-robot.jpg");
+      url("../img/header-robot-arm.png");
     background-size:cover;
     background-position:center;
     mix-blend-mode:overlay;
@@ -77,15 +77,23 @@
   }
   
   .robots-sort-label{
-    margin:.4rem 0 0;
+    margin:.6rem 0 0;
     font-size:.9rem;
     color:#64748b;
   }
   
-  /* Toolbar */
+  /* Toolbar + order */
+  
+  .robots-toolbar-row{
+    margin-top:1rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+    align-items:center;
+    justify-content:space-between;
+  }
   
   .robots-toolbar{
-    margin-top:1rem;
     display:flex;
     flex-wrap:wrap;
     gap:.6rem;
@@ -120,6 +128,71 @@
     background:var(--blue-900);
     border-color:var(--blue-900);
     color:#fff;
+  }
+  
+  .robots-order-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.35rem;
+    border-radius:999px;
+    border:1px solid #cbd5f5;
+    background:#ffffff;
+    padding:.45rem .8rem;
+    font-size:.9rem;
+    font-weight:600;
+    color:#0f172a;
+    cursor:pointer;
+    transition:background .18s ease, border-color .18s ease, transform .08s ease;
+  }
+  
+  .robots-order-btn:hover{
+    background:#e0efff;
+    border-color:#bfdbfe;
+  }
+  
+  .robots-order-btn:active{
+    transform:translateY(1px);
+  }
+  
+  .robots-order-label{
+    white-space:nowrap;
+  }
+  
+  .robots-order-icon{
+    font-size:1rem;
+    line-height:1;
+  }
+  
+  /* Filtry */
+  
+  .robots-filters{
+    margin-top:1rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    align-items:flex-end;
+  }
+  
+  .filter-group{
+    display:flex;
+    flex-direction:column;
+    gap:.25rem;
+    min-width:150px;
+  }
+  
+  .filter-group label{
+    font-size:.85rem;
+    font-weight:600;
+    color:#475569;
+  }
+  
+  .filter-group select{
+    border-radius:8px;
+    border:1px solid #cbd5f5;
+    padding:.4rem .55rem;
+    font-size:.9rem;
+    background:#ffffff;
+    color:#0f172a;
   }
   
   /* Grid a karty */
@@ -158,6 +231,10 @@
     border-color:#cbd5f5;
   }
   
+  .robot-card.is-filtered-out{
+    display:none;
+  }
+
   .robot-headline{
     display:flex;
     align-items:center;
@@ -276,6 +353,13 @@
   
     .robot-specs{
       grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+  }
+  
+  @media (max-width: 900px){
+    .robots-toolbar-row{
+      flex-direction:column;
+      align-items:flex-start;
     }
   }
   

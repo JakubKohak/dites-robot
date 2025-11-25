@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>DITES – Robotika | Roboti KUKA</title>
-  <meta name="description" content="Přehled robotů KUKA pro průmyslovou automatizaci – seřazené podle nosnosti, dosahu a počtu kloubů.">
+  <meta name="description" content="Přehled robotů KUKA pro průmyslovou automatizaci – seřazené a filtrované podle nosnosti, dosahu a počtu kloubů.">
 
   <link rel="icon" href="../../assets/img/favicon.ico">
   <link rel="stylesheet" href="../../assets/css/style.css">
@@ -63,31 +63,76 @@
     <section class="section robots-section" aria-labelledby="robots-section-title">
       <div class="container">
         <header class="robots-header">
-          <h2 id="robots-section-title">Vyber si, jak chceš roboty seřadit</h2>
+          <h2 id="robots-section-title">Vyber si, jak chceš roboty seřadit a filtrovat</h2>
           <p>Porovnej modely podle nosnosti, dosahu ramene nebo počtu kloubů.</p>
 
-          <div class="robots-toolbar" role="tablist" aria-label="Řazení robotů">
-            <button class="robots-sort-btn is-active"
+          <div class="robots-toolbar-row">
+            <div class="robots-toolbar" role="tablist" aria-label="Řazení robotů">
+              <button class="robots-sort-btn is-active"
+                      type="button"
+                      data-sort="payload"
+                      role="tab"
+                      aria-selected="true">
+                Podle nosnosti
+              </button>
+              <button class="robots-sort-btn"
+                      type="button"
+                      data-sort="reach"
+                      role="tab"
+                      aria-selected="false">
+                Podle dosahu
+              </button>
+              <button class="robots-sort-btn"
+                      type="button"
+                      data-sort="axes"
+                      role="tab"
+                      aria-selected="false">
+                Podle počtu kloubů
+              </button>
+            </div>
+
+            <button class="robots-order-btn"
                     type="button"
-                    data-sort="payload"
-                    role="tab"
-                    aria-selected="true">
-              Podle nosnosti
+                    data-direction="desc"
+                    aria-label="Změnit směr řazení">
+              <span class="robots-order-label">Od nejvyšší hodnoty</span>
+              <span class="robots-order-icon" aria-hidden="true">↓</span>
             </button>
-            <button class="robots-sort-btn"
-                    type="button"
-                    data-sort="reach"
-                    role="tab"
-                    aria-selected="false">
-              Podle dosahu
-            </button>
-            <button class="robots-sort-btn"
-                    type="button"
-                    data-sort="axes"
-                    role="tab"
-                    aria-selected="false">
-              Podle počtu kloubů
-            </button>
+          </div>
+
+          <div class="robots-filters" aria-label="Filtry" role="group">
+            <div class="filter-group">
+              <label for="filter-payload">Min. nosnost</label>
+              <select id="filter-payload">
+                <option value="0">Bez filtru</option>
+                <option value="20">20 kg</option>
+                <option value="60">60 kg</option>
+                <option value="120">120 kg</option>
+                <option value="240">240 kg</option>
+                <option value="400">400 kg</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filter-reach">Min. dosah</label>
+              <select id="filter-reach">
+                <option value="0">Bez filtru</option>
+                <option value="1500">1 500 mm</option>
+                <option value="2500">2 500 mm</option>
+                <option value="3000">3 000 mm</option>
+                <option value="3400">3 400 mm</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filter-axes">Min. počet kloubů</label>
+              <select id="filter-axes">
+                <option value="0">Bez filtru</option>
+                <option value="4">4 klouby</option>
+                <option value="5">5 kloubů</option>
+                <option value="6">6 kloubů</option>
+              </select>
+            </div>
           </div>
 
           <p class="robots-sort-label" id="robots-sort-label">
