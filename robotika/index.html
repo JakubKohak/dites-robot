@@ -163,7 +163,7 @@
       </div>
     </section>
 
-    <!-- Robots preview – pouze jeden robot -->
+    <!-- Robots preview – pouze jeden robot, text + obrázek vedle sebe -->
     <section class="section section-alt">
       <div class="container two-col">
         <div>
@@ -181,11 +181,17 @@
             </p>
           </header>
 
-          <div class="mini-grid">
+          <div class="mini-grid mini-grid--robot">
+            <!-- Levá karta: text, celá klikací -->
             <a class="mini-card mini-card--kr140 mini-card--link" href="./roboti/kr-140-r3200-2-pa/">
               <h3>KUKA KR 140 R3200-2 PA</h3>
               <p>Paletizační robot s dosahem téměř 3,2&nbsp;m a nosností 140&nbsp;kg.</p>
             </a>
+
+            <!-- Pravá karta: jen obrázek robota -->
+            <div class="mini-card mini-card--kr140-image" aria-hidden="true">
+              <img src="../assets/img/kr-140-r3200-2-pa.png" alt="">
+            </div>
           </div>
 
           <a class="btn btn-secondary" href="./roboti">Zobrazit přehled robotů</a>
