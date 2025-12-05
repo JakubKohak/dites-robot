@@ -413,6 +413,42 @@ a:hover{ color:var(--blue-900); }
 .mini-card h3{ margin:.1rem 0 .35rem; font-size:1.05rem; }
 .mini-card p{ margin:0 0 .6rem; color:var(--gray-600); font-size:.95rem; }
 
+.mini-card--kr140{
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+}
+
+.mini-card--kr140::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("../img/kr-140-r3200-2-pa.png");
+  background-size:contain;
+  background-position:center;
+  opacity:0.14;           
+  pointer-events:none;
+}
+
+.mini-card--kr140 h3,
+.mini-card--kr140 p,
+.mini-card--kr140 a{
+  position:relative;      
+  z-index:1;
+}
+
+.mini-card--link{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+
+.mini-card--link:hover{
+  transform:translateY(-5px);
+  border-color:#d6e7f4;
+  box-shadow:0 14px 40px rgba(15, 23, 42, .16);
+}
+
 /* CTA */
 .cta{
   background:

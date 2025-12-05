@@ -5,12 +5,41 @@
     border-bottom:1px solid #e2e8f0;
   }
   
+  /* Zpět odkaz nahoře vlevo */
+  .robot-hero-back{
+    padding-top:1.2rem;
+  }
+  
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:.3rem;
+    font-size:.9rem;
+    font-weight:600;
+    text-decoration:none;
+    color:var(--blue-900);
+    background:#e0ecf8;
+    padding:.35rem .8rem;
+    border-radius:999px;
+    border:1px solid #bfdbfe;
+    transition:background .18s ease, color .18s ease, transform .08s ease, box-shadow .18s ease;
+  }
+  
+  .back-link:hover{
+    background:#d0e3f8;
+    box-shadow:0 8px 24px rgba(15,23,42,.18);
+  }
+  
+  .back-link:active{
+    transform:translateY(1px);
+  }
+  
   .robot-hero-layout{
     display:grid;
     grid-template-columns:minmax(0, 1.3fr) minmax(0, 1fr);
     gap:2.2rem;
     align-items:center;
-    padding:3.5rem 0 3rem;
+    padding:1.5rem 0 3rem;
   }
   
   .robot-hero-left{
@@ -336,7 +365,7 @@
   
   @media (max-width: 720px){
     .robot-hero-layout{
-      padding:2.8rem 0 2.4rem;
+      padding:1.8rem 0 2.4rem;
     }
   
     .robot-meta{
