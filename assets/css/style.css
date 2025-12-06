@@ -133,7 +133,7 @@ a:hover{ color:var(--blue-900); }
   position:absolute; inset:0;
   background-image:
     radial-gradient(circle at 20% 10%, rgba(255,255,255,.18), transparent 40%),
-    url("../img/hero-robot.jpg");
+    url("../img/solutions/paletizace-bg.png");
   background-size:cover;
   background-position:center;
   mix-blend-mode:overlay;

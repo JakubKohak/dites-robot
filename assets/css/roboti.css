@@ -20,7 +20,7 @@
   background-image:
     radial-gradient(circle at 15% 0%, rgba(255,255,255,.18), transparent 45%),
     radial-gradient(circle at 85% 100%, rgba(255,255,255,.18), transparent 45%),
-    url("../img/hero-robot.jpg");
+    url("../img/header-robot-arm.png");
   background-size:cover;
   background-position:center;
   mix-blend-mode:overlay;
