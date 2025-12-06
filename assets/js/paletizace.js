@@ -2,10 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const revealEls = document.querySelectorAll('.reveal');
   
-    // Pokud žádné .reveal prvky nejsou, nic nedělej
     if (!revealEls.length) return;
   
-    // Fallback pro staré prohlížeče
     if (!('IntersectionObserver' in window)) {
       revealEls.forEach(el => el.classList.add('is-visible'));
       return;
@@ -14,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-  
         entry.target.classList.add('is-visible');
         obs.unobserve(entry.target);
       });
