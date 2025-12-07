@@ -1,43 +1,87 @@
-/* Print-only adjustments */
-* { box-shadow: none !important; }
+/* ===== PRINT VERSION ===== */
 
-nav, .nav-toggle, .hero-actions, .cta, .hero-bg { display: none !important; }
+@media print {
 
-body {
-  background: #fff !important;
-  color: #000 !important;
-  font-size: 12pt;
-}
+  /* Reset barev */
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-a { color:#000; text-decoration:underline; }
-a::after { content:" (" attr(href) ")"; font-size: 10pt; }
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+  }
 
-.site-header {
-  position: static;
-  background: #fff !important;
-  color:#000 !important;
-  border:none;
-}
+  /* Skrýt prvky, které se netisknou */
+  .site-header,
+  .primary-nav,
+  .nav-toggle,
+  .pallet-hero-bg,
+  .pallet-focus-bg,
+  .pallet-scenarios-bg,
+  footer,
+  .cta,
+  .btn {
+    display: none !important;
+  }
 
-.hero {
-  min-height: auto;
-  padding: 1rem 0;
-  background: #fff !important;
-  color:#000 !important;
-}
+  /* Layout do jednoho sloupce */
+  .container,
+  .main-content,
+  .pallet-hero-inner,
+  .pallet-focus-inner,
+  .pallet-scenarios-inner {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
 
-.section, .section-alt {
-  padding: 1.2rem 0;
-  background:#fff !important;
-  border:none !important;
-}
+  /* Hero text normálně viditelný */
+  .pallet-hero {
+    background: none !important;
+    padding: 0 0 1rem !important;
+  }
 
-.card, .mini-card, .figure {
-  border:1px solid #000 !important;
-}
+  /* Boxy — orámování, čistý tisk */
+  .pallet-focus-box,
+  .pallet-scenarios-box {
+    border: 1px solid #000 !important;
+    background: none !important;
+    padding: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
 
-.site-footer {
-  background:#fff !important;
-  color:#000 !important;
-  border-top:1px solid #000;
+  /* Grid → 1 sloupec */
+  .pallet-focus-grid,
+  .pallet-scenarios-grid {
+    display: block !important;
+  }
+
+  .pallet-focus-item,
+  .pallet-scenarios-item {
+    border: 1px solid #000 !important;
+    background: none !important;
+    margin-bottom: 0.7rem !important;
+    padding: 0.7rem !important;
+  }
+
+  /* Odkazy zobrazit i s URL */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+  }
+
+  /* Titul stránky nahoře */
+  body::before {
+    content: "DITES Robotika – Tisková verze";
+    display: block;
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 1rem;
+  }
 }
