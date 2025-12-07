@@ -1,16 +1,18 @@
 // Kontakt – scroll reveal + jednoduchá validace formuláře
 (() => {
+    // Označ dokument jako "má JS" – pro CSS (.has-js .reveal ...)
+    document.documentElement.classList.add('has-js');
+  
     // Scroll reveal
     const revealEls = document.querySelectorAll('.reveal');
   
     if ('IntersectionObserver' in window && revealEls.length) {
       const observer = new IntersectionObserver(
-        (entries) => {
+        (entries, obs) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
           });
         },
         { threshold: 0.18 }
@@ -18,7 +20,7 @@
   
       revealEls.forEach((el) => observer.observe(el));
     } else {
-      // fallback – vše viditelné
+      // fallback – vše viditelné (pro extrémně staré prohlížeče)
       revealEls.forEach((el) => el.classList.add('is-visible'));
     }
   

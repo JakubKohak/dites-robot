@@ -1,10 +1,13 @@
-// Reveal-on-scroll pro prvky .reveal
+// Reveal-on-scroll pro prvky .reveal – progresivní verze
 document.addEventListener('DOMContentLoaded', () => {
-    const revealEls = document.querySelectorAll('.reveal');
+    // označíme, že JS běží → CSS může použít .has-js .reveal…
+    document.documentElement.classList.add('has-js');
   
+    const revealEls = document.querySelectorAll('.reveal');
     if (!revealEls.length) return;
   
     if (!('IntersectionObserver' in window)) {
+      // fallback – jen přidáme .is-visible, animace se nepoužije
       revealEls.forEach(el => el.classList.add('is-visible'));
       return;
     }

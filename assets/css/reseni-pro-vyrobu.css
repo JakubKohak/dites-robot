@@ -12,7 +12,7 @@
     position:relative;
 }
 
-/* NEW: Always-visible white vertical separators */
+/* Always-visible white vertical separators */
 .solutions-grid::before,
 .solutions-grid::after{
     content:"";
@@ -46,11 +46,6 @@
     transition:transform .35s ease;
 }
 
-/* REMOVED old border-left line */
-/* .solution-panel + .solution-panel{
-    border-left:1px solid rgba(255,255,255,.40);
-} */
-
 .solution-panel{
     box-shadow:none !important;
 }
@@ -61,7 +56,8 @@
 
 /* Soft overlay */
 .solution-overlay{
-    position:absolute; inset:0;
+    position:absolute;
+    inset:0;
     background:
       linear-gradient(180deg, rgba(12,74,110,.50) 0%, rgba(12,74,110,.70) 60%, rgba(12,74,110,.92) 100%);
     z-index:-1;
@@ -81,25 +77,26 @@
     background:
       linear-gradient(
         180deg,
-        rgba(17, 124, 117, 0.18) 0%,   
-        rgba(20, 150, 168, 0.32) 60%,  
-        rgba(26, 213, 216, 0.46) 100%  
+        rgba(17, 124, 117, 0.18) 0%,
+        rgba(20, 150, 168, 0.32) 60%,
+        rgba(26, 213, 216, 0.46) 100%
       );
 }
 .solution-panel--3 .solution-overlay{
     background:
       linear-gradient(
         180deg,
-        rgba(72, 64, 154, 0.18) 0%,   
-        rgba(72, 64, 154, 0.32) 60%,  
-        rgba(66, 46, 127, 0.48) 100%  
+        rgba(72, 64, 154, 0.18) 0%,
+        rgba(72, 64, 154, 0.32) 60%,
+        rgba(66, 46, 127, 0.48) 100%
       );
 }
 
 /* texture */
 .solution-panel::after{
     content:"";
-    position:absolute; inset:-20%;
+    position:absolute;
+    inset:-20%;
     background:radial-gradient(circle at 30% 20%, rgba(255,255,255,.18), transparent 55%);
     mix-blend-mode:soft-light;
     opacity:.55;
@@ -126,7 +123,8 @@
 }
 
 .solution-icon{
-    width:46px; height:46px;
+    width:46px;
+    height:46px;
     object-fit:contain;
     background:rgba(255,255,255,.9);
     border-radius:12px;
@@ -179,13 +177,19 @@
     transform:translateY(1px);
 }
 
-/* Reveal */
+/* Reveal – progresivní: bez JS je obsah viditelný */
 .reveal{
+    opacity:1;
+    transform:none;
+}
+
+.has-js .reveal{
     opacity:0;
     transform:translateY(18px);
     transition:opacity .7s ease, transform .7s ease;
 }
-.reveal.is-visible{
+
+.has-js .reveal.is-visible{
     opacity:1;
     transform:none;
 }
@@ -197,7 +201,7 @@
         min-height:auto;
     }
 
-    /* NEW: Remove vertical separators on mobile */
+    /* Remove vertical separators on mobile */
     .solutions-grid::before,
     .solutions-grid::after{
         display:none;

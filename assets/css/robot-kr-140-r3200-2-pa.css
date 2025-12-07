@@ -334,15 +334,21 @@
     margin-top:-.4rem;
   }
   
-  /* Reveal */
+  /* Reveal – progresivní:
+     bez JS je obsah viditelný, s JS animujeme (.has-js) */
   
   .reveal{
+    opacity:1;
+    transform:none;
+  }
+  
+  .has-js .reveal{
     opacity:0;
     transform:translateY(18px);
     transition:opacity .7s ease, transform .7s ease;
   }
   
-  .reveal.is-visible{
+  .has-js .reveal.is-visible{
     opacity:1;
     transform:none;
   }

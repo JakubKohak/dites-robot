@@ -329,15 +329,21 @@
     margin-top:-.5rem;
   }
   
-  /* Reveal animace (stejná filozofie jako u řešení pro výrobu) */
+  /* Reveal animace – progresivní:
+     bez JS je obsah viditelný, s JS se použije animace (.has-js) */
   
   .reveal{
+    opacity:1;
+    transform:none;
+  }
+  
+  .has-js .reveal{
     opacity:0;
     transform:translateY(18px);
     transition:opacity .7s ease, transform .7s ease;
   }
   
-  .reveal.is-visible{
+  .has-js .reveal.is-visible{
     opacity:1;
     transform:none;
   }

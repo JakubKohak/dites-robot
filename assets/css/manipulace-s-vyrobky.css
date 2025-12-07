@@ -8,15 +8,15 @@
       radial-gradient(circle at 100% 100%, rgba(96,165,250,.30), transparent 60%), /* světle modrá */
       linear-gradient(120deg, #0f172a 0%, #4338ca 55%, #4f46e5 100%); /* nádech indigo-violet */
     overflow:hidden;
-}
-
-.pallet-hero-back{
+  }
+  
+  .pallet-hero-back{
     position:relative;
     padding-top:.9rem;
     z-index:2;
-}
-
-.back-link{
+  }
+  
+  .back-link{
     display:inline-flex;
     align-items:center;
     gap:.3rem;
@@ -29,18 +29,18 @@
     border-radius:999px;
     border:1px solid rgba(191,219,254,1);
     transition:background .18s ease, color .18s ease, transform .08s ease, box-shadow .18s ease;
-}
-
-.back-link:hover{
+  }
+  
+  .back-link:hover{
     background:#dbeafe;
     box-shadow:0 8px 24px rgba(15,23,42,.25);
-}
-
-.back-link:active{
+  }
+  
+  .back-link:active{
     transform:translateY(1px);
-}
-
-.pallet-hero-bg{
+  }
+  
+  .pallet-hero-bg{
     position:absolute;
     inset:0;
     background-image:
@@ -51,9 +51,9 @@
     background-size:cover, cover, contain;
     background-position:center, center, center;
     opacity:.86;
-}
-
-.pallet-hero-inner{
+  }
+  
+  .pallet-hero-inner{
     position:relative;
     z-index:2;
     min-height:180px;
@@ -62,34 +62,34 @@
     align-items:center;
     justify-content:center;
     text-align:center;
-}
-
-.pallet-hero-content{
+  }
+  
+  .pallet-hero-content{
     max-width:520px;
-}
-
-.pallet-eyebrow{
+  }
+  
+  .pallet-eyebrow{
     margin:0 0 .3rem;
     font-size:.75rem;
     letter-spacing:.16em;
     text-transform:uppercase;
     font-weight:800;
     color:rgba(226,232,240,.9);
-}
-
-.pallet-hero-content h1{
+  }
+  
+  .pallet-hero-content h1{
     margin:0 0 .45rem;
     font-size:clamp(1.8rem, 4vw, 2.3rem);
     line-height:1.15;
-}
-
-.pallet-hero-lead{
+  }
+  
+  .pallet-hero-lead{
     margin:0 0 .6rem;
     font-size:clamp(.9rem, 2vw, 1rem);
     color:rgba(226,232,240,.96);
-}
-
-.pallet-hero-tags{
+  }
+  
+  .pallet-hero-tags{
     margin:.15rem 0 0;
     padding:0;
     list-style:none;
@@ -97,9 +97,9 @@
     flex-wrap:wrap;
     justify-content:center;
     gap:.4rem;
-}
-
-.pallet-hero-tags li{
+  }
+  
+  .pallet-hero-tags li{
     font-size:.72rem;
     letter-spacing:.08em;
     text-transform:uppercase;
@@ -108,19 +108,19 @@
     border-radius:999px;
     border:1px solid rgba(226,232,240,.8);
     background:rgba(15,23,42,.65);
-}
-
-
-
-/* ===== 2. PRUH – obrázek + box uprostřed ===== */
-
-.pallet-focus{
+  }
+  
+  
+  
+  /* ===== 2. PRUH – obrázek + box uprostřed ===== */
+  
+  .pallet-focus{
     position:relative;
     color:#fff;
     overflow:hidden;
-}
-
-.pallet-focus-bg{
+  }
+  
+  .pallet-focus-bg{
     position:absolute;
     inset:0;
     background-image:
@@ -131,9 +131,9 @@
     background-size:cover, cover, contain;
     background-position:center;
     filter:brightness(1.02);
-}
-
-.pallet-focus-inner{
+  }
+  
+  .pallet-focus-inner{
     position:relative;
     z-index:1;
     min-height:200px;
@@ -141,9 +141,9 @@
     display:flex;
     align-items:center;
     justify-content:center;
-}
-
-.pallet-focus-box{
+  }
+  
+  .pallet-focus-box{
     max-width:720px;
     width:100%;
     padding:1.3rem 1.4rem;
@@ -154,49 +154,49 @@
     border:1px solid rgba(148,163,184,.55);
     box-shadow:0 16px 40px rgba(15,23,42,.7);
     text-align:center;
-}
-
-.pallet-focus-box h2{
+  }
+  
+  .pallet-focus-box h2{
     margin:0 0 .55rem;
     font-size:1.35rem;
-}
-
-.pallet-focus-sub{
+  }
+  
+  .pallet-focus-sub{
     margin:0 0 .75rem;
     font-size:.9rem;
     color:rgba(226,232,240,.96);
-}
-
-.pallet-focus-grid{
+  }
+  
+  .pallet-focus-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
     gap:.75rem;
-}
-
-.pallet-focus-item{
+  }
+  
+  .pallet-focus-item{
     padding:.65rem .7rem;
     border-radius:12px;
     background:rgba(30,27,75,.82); /* indigo */
     border:1px solid rgba(148,163,184,.55);
     font-size:.85rem;
-}
-
-.pallet-focus-item strong{
+  }
+  
+  .pallet-focus-item strong{
     display:block;
     margin-bottom:.2rem;
-}
-
-
-
-/* ===== 3. PRUH – Typické scénáře použití ===== */
-
-.pallet-scenarios{
+  }
+  
+  
+  
+  /* ===== 3. PRUH – Typické scénáře použití ===== */
+  
+  .pallet-scenarios{
     position:relative;
     color:#fff;
     overflow:hidden;
-}
-
-.pallet-scenarios-bg{
+  }
+  
+  .pallet-scenarios-bg{
     position:absolute;
     inset:0;
     background-image:
@@ -207,9 +207,9 @@
     background-size:cover, cover, contain;
     background-position:center;
     filter:brightness(.93);
-}
-
-.pallet-scenarios-inner{
+  }
+  
+  .pallet-scenarios-inner{
     position:relative;
     z-index:1;
     min-height:200px;
@@ -217,9 +217,9 @@
     display:flex;
     align-items:center;
     justify-content:center;
-}
-
-.pallet-scenarios-box{
+  }
+  
+  .pallet-scenarios-box{
     max-width:780px;
     width:100%;
     padding:1.35rem 1.6rem;
@@ -230,47 +230,55 @@
     border:1px solid rgba(148,163,184,.7);
     box-shadow:0 16px 40px rgba(15,23,42,.8);
     text-align:center;
-}
-
-.pallet-scenarios-box h2{
+  }
+  
+  .pallet-scenarios-box h2{
     margin:0 0 .55rem;
     font-size:1.35rem;
-}
-
-.pallet-scenarios-sub{
+  }
+  
+  .pallet-scenarios-sub{
     margin:0 0 .8rem;
     font-size:.9rem;
     color:rgba(226,232,240,.96);
-}
-
-.pallet-scenarios-grid{
+  }
+  
+  .pallet-scenarios-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
     gap:.75rem;
-}
-
-.pallet-scenarios-item{
+  }
+  
+  .pallet-scenarios-item{
     padding:.65rem .7rem;
     border-radius:12px;
     background:rgba(30,27,75,.84); /* indigo */
     border:1px solid rgba(148,163,184,.65);
     font-size:.85rem;
-}
-
-.pallet-scenarios-item strong{
+  }
+  
+  .pallet-scenarios-item strong{
     display:block;
     margin-bottom:.2rem;
-}
-
-/* ===== REVEAL ANIMATION ===== */
-
-.reveal{
+  }
+  
+  
+  /* ===== REVEAL ANIMATION – progresivně ===== */
+  
+  /* Bez JS je obsah normálně vidět */
+  .reveal{
+    opacity:1;
+    transform:none;
+  }
+  
+  /* Když běží JS (.has-js na <html>), animujeme */
+  .has-js .reveal{
     opacity:0;
     transform:translateY(16px);
     transition:opacity .55s ease, transform .55s ease;
-}
-
-.reveal.is-visible{
+  }
+  
+  .has-js .reveal.is-visible{
     opacity:1;
     transform:none;
-}
+  }

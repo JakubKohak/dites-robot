@@ -1,8 +1,9 @@
-// Reveal-on-scroll pro prvky .reveal
+// Reveal-on-scroll pro prvky .reveal – progresivní verze
 document.addEventListener('DOMContentLoaded', () => {
-    const revealEls = document.querySelectorAll('.reveal');
+    // označíme, že JS běží
+    document.documentElement.classList.add('has-js');
   
-    // Pokud žádné .reveal prvky nejsou, nic nedělej
+    const revealEls = document.querySelectorAll('.reveal');
     if (!revealEls.length) return;
   
     // Fallback pro staré prohlížeče

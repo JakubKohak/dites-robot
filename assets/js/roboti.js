@@ -1,5 +1,8 @@
 // Jednoduchá reveal animace pro kartu robota
 (() => {
+  // Označ dokument jako "má JS" – pro CSS (.has-js .reveal ...)
+  document.documentElement.classList.add('has-js');
+
   const revealEls = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window) || !revealEls.length) return;
 
