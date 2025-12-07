@@ -44,7 +44,7 @@
     </div>
   </header>
 
-  <main id="main" class="main-content" role="main">
+  <main id="main" class="main-content">
 
     <!-- Hero: text + obrázek -->
     <section class="robot-hero" aria-labelledby="robot-hero-title">
@@ -163,7 +163,9 @@
 
         <div class="robot-spec-tabs-wrapper reveal">
           <div class="robot-spec-tabs" role="tablist" aria-label="Skupiny parametrů robota">
-            <button class="robot-spec-tab is-active"
+            
+            <button id="spec-basic-tab"
+                    class="robot-spec-tab is-active"
                     type="button"
                     role="tab"
                     aria-selected="true"
@@ -171,7 +173,9 @@
                     data-target="spec-basic">
               Základní parametry
             </button>
-            <button class="robot-spec-tab"
+
+            <button id="spec-axes-tab"
+                    class="robot-spec-tab"
                     type="button"
                     role="tab"
                     aria-selected="false"
@@ -179,7 +183,9 @@
                     data-target="spec-axes">
               Pohyby a rychlosti os
             </button>
-            <button class="robot-spec-tab"
+
+            <button id="spec-env-tab"
+                    class="robot-spec-tab"
                     type="button"
                     role="tab"
                     aria-selected="false"
@@ -187,59 +193,28 @@
                     data-target="spec-env">
               Provozní podmínky
             </button>
+          
           </div>
 
           <div class="robot-spec-panels">
+
             <!-- Základní parametry -->
             <section id="spec-basic"
                      class="robot-spec-panel is-active"
                      role="tabpanel"
                      aria-labelledby="spec-basic-tab">
               <dl class="robot-spec-list">
-                <div>
-                  <dt>Jmenovitá nosnost</dt>
-                  <dd>140&nbsp;kg</dd>
-                </div>
-                <div>
-                  <dt>Maximální nosnost</dt>
-                  <dd>až 180&nbsp;kg (dle podmínek zatížení)</dd>
-                </div>
-                <div>
-                  <dt>Maximální dosah</dt>
-                  <dd>3195&nbsp;mm</dd>
-                </div>
-                <div>
-                  <dt>Opakovatelnost</dt>
-                  <dd>±0,07&nbsp;mm</dd>
-                </div>
-                <div>
-                  <dt>Počet os</dt>
-                  <dd>5</dd>
-                </div>
-                <div>
-                  <dt>Hmotnost robota</dt>
-                  <dd>cca 1017&nbsp;kg</dd>
-                </div>
-                <div>
-                  <dt>Půdorys základny</dt>
-                  <dd>754&nbsp;×&nbsp;754&nbsp;mm</dd>
-                </div>
-                <div>
-                  <dt>Montážní poloha</dt>
-                  <dd>podlaha</dd>
-                </div>
-                <div>
-                  <dt>Doplňková zátěž (sloup)</dt>
-                  <dd>300&nbsp;kg</dd>
-                </div>
-                <div>
-                  <dt>Doplňková zátěž (rameno)</dt>
-                  <dd>130&nbsp;kg</dd>
-                </div>
-                <div>
-                  <dt>Doplňková zátěž (předloktí)</dt>
-                  <dd>150&nbsp;kg</dd>
-                </div>
+                <div><dt>Jmenovitá nosnost</dt><dd>140&nbsp;kg</dd></div>
+                <div><dt>Maximální nosnost</dt><dd>až 180&nbsp;kg (dle podmínek zatížení)</dd></div>
+                <div><dt>Maximální dosah</dt><dd>3195&nbsp;mm</dd></div>
+                <div><dt>Opakovatelnost</dt><dd>±0,07&nbsp;mm</dd></div>
+                <div><dt>Počet os</dt><dd>5</dd></div>
+                <div><dt>Hmotnost robota</dt><dd>cca 1017&nbsp;kg</dd></div>
+                <div><dt>Půdorys základny</dt><dd>754&nbsp;×&nbsp;754&nbsp;mm</dd></div>
+                <div><dt>Montážní poloha</dt><dd>podlaha</dd></div>
+                <div><dt>Doplňková zátěž (sloup)</dt><dd>300&nbsp;kg</dd></div>
+                <div><dt>Doplňková zátěž (rameno)</dt><dd>130&nbsp;kg</dd></div>
+                <div><dt>Doplňková zátěž (předloktí)</dt><dd>150&nbsp;kg</dd></div>
               </dl>
             </section>
 
@@ -253,52 +228,22 @@
                 <div>
                   <h3>Rozsahy pohybu</h3>
                   <dl class="robot-spec-list">
-                    <div>
-                      <dt>Osa A1</dt>
-                      <dd>±185°</dd>
-                    </div>
-                    <div>
-                      <dt>Osa A2</dt>
-                      <dd>−140° až −5°</dd>
-                    </div>
-                    <div>
-                      <dt>Osa A3</dt>
-                      <dd>0° až +165°</dd>
-                    </div>
-                    <div>
-                      <dt>Osa A5</dt>
-                      <dd>−55° až +150°</dd>
-                    </div>
-                    <div>
-                      <dt>Osa A6</dt>
-                      <dd>±350°</dd>
-                    </div>
+                    <div><dt>Osa A1</dt><dd>±185°</dd></div>
+                    <div><dt>Osa A2</dt><dd>−140° až −5°</dd></div>
+                    <div><dt>Osa A3</dt><dd>0° až +165°</dd></div>
+                    <div><dt>Osa A5</dt><dd>−55° až +150°</dd></div>
+                    <div><dt>Osa A6</dt><dd>±350°</dd></div>
                   </dl>
                 </div>
 
                 <div>
                   <h3>Rychlosti os</h3>
                   <dl class="robot-spec-list">
-                    <div>
-                      <dt>Osa A1</dt>
-                      <dd>137°/s</dd>
-                    </div>
-                    <div>
-                      <dt>Osa A2</dt>
-                      <dd>111°/s</dd>
-                    </div>
-                    <div>
-                      <dt>Osa A3</dt>
-                      <dd>119°/s</dd>
-                    </div>
-                    <div>
-                      <dt>Osa A5</dt>
-                      <dd>225°/s</dd>
-                    </div>
-                    <div>
-                      <dt>Osa A6</dt>
-                      <dd>321°/s</dd>
-                    </div>
+                    <div><dt>Osa A1</dt><dd>137°/s</dd></div>
+                    <div><dt>Osa A2</dt><dd>111°/s</dd></div>
+                    <div><dt>Osa A3</dt><dd>119°/s</dd></div>
+                    <div><dt>Osa A5</dt><dd>225°/s</dd></div>
+                    <div><dt>Osa A6</dt><dd>321°/s</dd></div>
                   </dl>
                   <p class="robot-spec-note">
                     Robot má 5 aktivních os; osa A4 není využita, protože se jedná o specializovaný paletizační model.
@@ -314,22 +259,10 @@
                      aria-labelledby="spec-env-tab"
                      hidden>
               <dl class="robot-spec-list">
-                <div>
-                  <dt>Teplota okolí</dt>
-                  <dd>0&nbsp;°C až 55&nbsp;°C</dd>
-                </div>
-                <div>
-                  <dt>Krytí robota</dt>
-                  <dd>IP65</dd>
-                </div>
-                <div>
-                  <dt>Krytí zápěstí</dt>
-                  <dd>IP65</dd>
-                </div>
-                <div>
-                  <dt>Řídicí systém</dt>
-                  <dd>KR&nbsp;C5</dd>
-                </div>
+                <div><dt>Teplota okolí</dt><dd>0&nbsp;°C až 55&nbsp;°C</dd></div>
+                <div><dt>Krytí robota</dt><dd>IP65</dd></div>
+                <div><dt>Krytí zápěstí</dt><dd>IP65</dd></div>
+                <div><dt>Řídicí systém</dt><dd>KR&nbsp;C5</dd></div>
               </dl>
 
               <p class="robot-spec-note">
