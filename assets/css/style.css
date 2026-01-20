@@ -470,6 +470,23 @@ a:hover{ color:var(--blue-900); }
   object-fit:contain;
 }
 
+/* ===== Robots header (moved from inline styles) ===== */
+.robots-head{
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+}
+
+.robots-head-icon{
+  width:40px;
+  height:auto;
+  opacity:0.9;
+}
+
+.robots-head-title{
+  margin:0;
+}
+
 /* CTA */
 .cta{
   background:
